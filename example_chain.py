@@ -1,9 +1,12 @@
-import time
+import os, time
 
 from block import Block
 from blockchain import Blockchain
 
+if not os.path.exists("blocks"):
+    os.makedirs("blocks")
 testBlockchain = Blockchain(4, 42)
+
 
 for i in range(100):
 
